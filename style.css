@@ -1,0 +1,121 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.game-body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("./background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#instructions{
+    display: none;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+}
+
+#background {
+    width: 650px;
+    height: 550px;
+    background-image: url("./ground.webp");
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+#background div {
+    width: 150px;
+    height: 140px;
+    background-image: url("./pot.png");
+    background-size: cover;
+    padding: 18px;
+    margin-left: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+}
+
+#background div img{
+    width: 100px;
+    height: 100px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.main-background,
+.end-background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 635px;
+}
+
+.playbutton {
+    background-color: rgba(36, 33, 33, 0.534);
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-left: 45%;
+    margin-top: 300px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.logo-main {
+    margin-left: 50%;
+}
+
+.playagain-button {
+    margin-top: 12%;
+    padding: 10px;
+    margin-left: 20%;
+    background-color: rgba(36, 33, 33, 0.534);
+    border: 2px solid white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.score-shown {
+    text-align: center;
+    align-items: center;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 500px) and (min-height: 980px) {
+    .playbutton {
+        margin-left: 35%;
+        margin-top: 20px;
+    }
+
+    .playagain-button {
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+
+    .background {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .background div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .game-body {
+        height: 100vh;
+    }
+}
+
