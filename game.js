@@ -4,28 +4,23 @@ let lastMonkeyPot;
 let lastFoxPot;
 let score = 0;
 let finished = false;
+// onload the functions should run
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
   startgame();
   playBackgroundSound();
-};
-
-const instructionduration = 6000;
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("instructions").style.display = "block";
-
-  setTimeout(function () {
-    document.getElementById("instructions").style.display = "none";
-  }, instructionduration);
 });
 
 function playBackgroundSound() {
-  let backgroundsound = new Audio("./Dora.mp3");
-  backgroundsound.play();
-  backgroundsound.loop = true;
-  backgroundsound.volume = 0.2;
+  const backgroundsound = new Audio("./Dora.mp3");
+  backgroundsound.play()
+    .then(() => {
+      backgroundsound.loop = true;
+      backgroundsound.volume = 0.2;
+    })
+    .catch(error => console.error('Error playing sound:', error));
 }
+
 
 function startgame() {
   for (let k = 0; k < 9; k++) {
@@ -97,7 +92,7 @@ function choosethepot() {
       document.getElementById("score").innerText =
         "YOU WON!! " + score.toString();
       // Redirect to end.html when the user wins
-    window.location.href = "./end.html";
+    window.location.href = "./end(won).html";
     } else {
       document.getElementById("score").innerText = score.toString();
       setfox();
@@ -107,7 +102,8 @@ function choosethepot() {
       "GAME OVER: " + score.toString();
     finished = true;
     // Redirect to end.html when the game is over
-    window.location.href = "./end.html";
+    window.location.href = "./end(lost).html";
   }
 }
+
 

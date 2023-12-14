@@ -5,4 +5,6 @@ playagainbutton.addEventListener('click', function () {
 let endsound = new Audio('./Explorer.mp3');
 endsound.play();
 endsound.loop = true;
+document.getElementById("name").innerHTML=localStorage.getItem("name")
+ 
 

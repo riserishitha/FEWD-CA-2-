@@ -3,8 +3,11 @@
     margin: 0px;
 }
 
+body {
+    font-family: 'Jolly Lodger', cursive;
+}
+
 .game-body {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background: url("./background.png");
     background-repeat: no-repeat;
@@ -12,11 +15,11 @@
 }
 
 #instructions{
-    display: none;
     border-radius: 10px;
+    border: 2px solid whitesmoke;
     align-items: center;
     justify-content: center;
-    margin-left: 25%;
+    margin-top: 10%;
 }
 
 #background {
@@ -28,6 +31,76 @@
     flex-wrap: wrap;
     border: 2px solid white;
     border-radius: 20px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#login-page p {
+    font-size: 1.5rem;
+    font-family:  'Jolly Lodger', cursive;
+    animation: bounce 2s infinite;
+    margin-left: 20px;
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: red; }
+}
+
+#login {
+    animation: colorChange 5s infinite;
+    font-family:  'Jolly Lodger', cursive;
+}
+
+#login-page{
+    width: 500px;
+    height: 400px;
+    background-color: rgba(173, 161, 161, 0.438);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+#login{
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 900;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 180px;
+    background-color: rgba(243, 243, 243, 0.479);
+    color: black;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
+
+.required{
+    width: 450px;
+    border: 2px solid black;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
 }
 
 #background div {
@@ -65,8 +138,6 @@
     background-color: rgba(36, 33, 33, 0.534);
     border: 2px solid white;
     border-radius: 10px;
-    margin-left: 45%;
-    margin-top: 300px;
     padding: 5px;
     cursor: pointer;
 }
@@ -76,9 +147,9 @@
 }
 
 .playagain-button {
-    margin-top: 12%;
+    margin-top: 5%;
     padding: 10px;
-    margin-left: 20%;
+    margin-left: 35%;
     background-color: rgba(36, 33, 33, 0.534);
     border: 2px solid white;
     border-radius: 10px;
@@ -87,13 +158,63 @@
     cursor: pointer;
 }
 
-.score-shown {
+@keyframes firecracker {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-200px) rotate(360deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0) rotate(720deg);
+      opacity: 0;
+    }
+}
+  
+#show-score {
+    margin-left: 550px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    animation: firecracker 2s ease-out;
     text-align: center;
     align-items: center;
+    justify-content: space-evenly;
+    /* font-size: 3rem; */
+}
+  
+#about-us{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 50px;
+    cursor: pointer;
+    background-color: rgba(192, 181, 181, 0.534);
+}
+
+.about-pg{
+    margin-top: 8%;
+}
+
+#exit{
+    border: 2px solid black;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: rgba(185, 175, 175, 0.582);
+    cursor: pointer;
 }
 
 /* Media Queries for Responsiveness */
-@media only screen and (max-width: 500px) and (min-height: 980px) {
+/* @media only screen and (max-width: 500px) and (min-height: 980px) {
     .playbutton {
         margin-left: 35%;
         margin-top: 20px;
@@ -117,5 +238,5 @@
     .game-body {
         height: 100vh;
     }
-}
+} */
 

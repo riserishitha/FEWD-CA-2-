@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="game-body">
+    <div>
+      <img src="./about us pg.png" alt="" class="about-pg" />
+    </div>
+    <button id="exit">EXIT</button>
+  </body>
+  <script>
+    let about = document.getElementById("exit");
+    function exitpage() {
+      window.location.href = "./index.html";
+    }
+    about.addEventListener("click", exitpage);
+  </script>
+</html>
