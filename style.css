@@ -24,8 +24,8 @@ body {
 }
 /* adding styles for the id tag  */
 #background {
-    width: 650px;
-    height: 550px;
+    width: 500px;
+    height: 500px;
     background-image: url("./ground.webp");
     margin: 0 auto;
     display: flex;
@@ -105,12 +105,12 @@ h1{
 }
 /* adding img for the divs created in js */
 #background div {
-    width: 150px;
+    width: 120px;
     height: 140px;
     background-image: url("./pot.png");
     background-size: cover;
     padding: 18px;
-    margin-left: 25px;
+    margin-left: 5px;
     align-items: center;
     justify-content: space-evenly;
     cursor: pointer;
@@ -131,7 +131,7 @@ h1{
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 635px;
+    /* height: 635px; */
 }
 /* stying play btn */
 .playbutton {
@@ -214,29 +214,67 @@ h1{
 }
 
 /* Media Queries for Responsiveness */
-/* @media only screen and (max-width: 500px) and (min-height: 980px) {
-    .playbutton {
-        margin-left: 35%;
-        margin-top: 20px;
+@media only screen and (min-width: 325px) and (max-width: 600px) {
+    .main-background {
+        width: 50%;
+        height: 45%;
     }
-
-    .playagain-button {
+    #login-page{
+        width: 40%;
+        height: 10%;
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+    #login-page p{
+        font-size: 0.75rem;
+    }
+    .required{
+        width: 70%;
+        height: 90%;
+    }
+    #login{
+        margin-left: 30%;
+        height: 50%;
+        width: 30%;
+        margin-bottom: 5%;
+    }
+    h1{
+        font-size: 0.75rem;
+    }
+    .logo-main{
+        width: 20%;
+        height: 10%;
+        margin-left: 10%;
+    }
+    #about-us{
+        width: 10%;
+        margin-left: 2%;
+    }
+    #instructions{
+        margin-top: 50%;
+        width: 95%;
+    }
+    .game-body{
+        height: 100vh;
+        width: 100vw;
+    }
+    .playbutton{
         margin-top: 20%;
+    }
+    #Whacksentences{
+        font-size: 1.25rem;
+    }
+    .end-background{
+        height: 100vh;
+    }
+    .playagain-button{
+        width: 45%;
+        margin-top: 30%;
+    }
+    #show-score{
         margin-left: 5%;
     }
 
-    .background {
-        width: 100%;
-        height: 100vh;
-    }
+}
 
-    .background div {
-        height: 100%;
-        width: 100%;
-    }
-
-    .game-body {
-        height: 100vh;
-    }
-} */
 
