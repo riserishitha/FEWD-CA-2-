@@ -1,26 +1,28 @@
+// initializing the functions
 let whackmonkey;
 let whackfox;
 let lastMonkeyPot;
 let lastFoxPot;
 let score = 0;
 let finished = false;
-// onload the functions should run
+// onload the functions will run
 
 document.addEventListener("DOMContentLoaded", () => {
   startgame();
   playBackgroundSound();
 });
-
+// giving background music for the page by giving function
 function playBackgroundSound() {
   const backgroundsound = new Audio("./Dora.mp3");
-  backgroundsound.play()
+  backgroundsound
+    .play()
     .then(() => {
       backgroundsound.loop = true;
       backgroundsound.volume = 0.2;
     })
-    .catch(error => console.error('Error playing sound:', error));
+    .catch((error) => console.error("Error playing sound:", error));
 }
-
+// function initialized to start the game and also used to create divs instead of creating in html
 
 function startgame() {
   for (let k = 0; k < 9; k++) {
@@ -29,10 +31,10 @@ function startgame() {
     pots.addEventListener("click", choosethepot);
     document.getElementById("background").appendChild(pots);
   }
-  setInterval(setfox, 1500);
-  setInterval(setmonkey, 3000);
+  setInterval(setfox, 1300); //giving certain intervals to show the pic
+  setInterval(setmonkey, 1500); //giving certain intervals to show the pic
 }
-
+// writing function to get random pot in the set of pots
 function getrandompot(lastPot) {
   let random;
   do {
@@ -40,6 +42,7 @@ function getrandompot(lastPot) {
   } while (random === lastPot);
   return random.toString();
 }
+// adding fox imgs in random pots
 
 function setfox() {
   if (finished) {
@@ -59,6 +62,7 @@ function setfox() {
   whackfox = document.getElementById(random);
   whackfox.appendChild(fox);
 }
+// adding monkey img in random pots
 
 function setmonkey() {
   if (finished) {
@@ -78,7 +82,7 @@ function setmonkey() {
   whackmonkey = document.getElementById(random);
   whackmonkey.appendChild(monkey);
 }
-
+// increasing the score if the correct pot is selected
 function choosethepot() {
   if (finished) {
     return;
@@ -92,7 +96,7 @@ function choosethepot() {
       document.getElementById("score").innerText =
         "YOU WON!! " + score.toString();
       // Redirect to end.html when the user wins
-    window.location.href = "./end(won).html";
+      window.location.href = "./end(won).html";
     } else {
       document.getElementById("score").innerText = score.toString();
       setfox();
@@ -105,5 +109,3 @@ function choosethepot() {
     window.location.href = "./end(lost).html";
   }
 }
-
-

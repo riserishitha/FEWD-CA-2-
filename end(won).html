@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Output page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Win page</title>
+    <!-- connecingto css file  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div>
-        <img src="./last page won.jpg" alt="" class="end-background">
-        <p id="show-score">YOU WON🥰!! <span id="name"></span></p>
-        <img src="./play again button.png" alt="" class="playagain-button">
-    </div>    
-</body>
-<script src="./end.js"></script>
+      <!-- assiging background img and giving playagin btn -->
+      <img src="./last page won.jpg" alt="" class="end-background" />
+      <!-- giving ptag to sore the set of arr and span tag is used to show the name we stored in index.js -->
+      <p id="show-score"><span id="name"></span></p>
+      <img src="./play again button.png" alt="" class="playagain-button" />
+    </div>
+  </body>
+  <!-- js given in html -->
+  <script>
+    // on click function to playagain btn
+    let playagainbutton = document.querySelector(".playagain-button");
+    playagainbutton.addEventListener("click", function () {
+      window.location.href = "./index.html";
+    });
+    // music to background
+    let endsound = new Audio("./Explorer.mp3");
+    endsound.play();
+    endsound.loop = true;
+    // getting the name stored in local storage by using get item ()
+    document.getElementById("name").innerHTML = localStorage.getItem("name");
+    // giving set of messages in a array and generating them randomly using math.floor and math.random on page load
+    document.addEventListener("DOMContentLoaded", function () {
+      const wonMessages = [
+        "🎉 Congratulations! You're the champion! 🏆",
+        "👏 You did it! Victory is yours! 🥳",
+        "🌟 Incredible! You've emerged victorious! 🎊",
+        "👍 Well done! You've achieved success! 🎉",
+        "🎊 Hooray! You're the winner! 🏅",
+        "🚀 Fantastic job! You've conquered the challenge! 🏆",
+        "👑 Bravo! You've come out on top! 🎉",
+        "🏆 Outstanding performance! You've won! 🌟",
+        "🎈 Kudos to you! You're the triumphant one! 🏅",
+        "👊 Amazing! You've secured the win! 🎊",
+      ];
+      const showScoreElement = document.getElementById("show-score");
+      const randomwonMessage =
+        wonMessages[Math.floor(Math.random() * wonMessages.length)];
+      showScoreElement.innerHTML =
+        randomwonMessage + " " + document.getElementById("name").innerHTML;
+    });
+  </script>
 </html>

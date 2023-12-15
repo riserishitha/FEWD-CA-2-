@@ -7,16 +7,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="game-body">
+    <!-- assiging backgroundimg and adding exit btn -->
     <div>
       <img src="./about us pg.png" alt="" class="about-pg" />
     </div>
     <button id="exit">EXIT</button>
   </body>
+  <!-- giving js in html -->
   <script>
+    // giving on clicking function and adding music and redirecing to another page
     let about = document.getElementById("exit");
     function exitpage() {
       window.location.href = "./index.html";
     }
     about.addEventListener("click", exitpage);
+    let clicksound = new Audio("./on click music.wav");
+    clicksound.volume = 0.3;
+
+    about.addEventListener("mousedown", function () {
+      clicksound.play();
+      clicksound.loop = true;
+    });
+
+    about.addEventListener("mouseup", function () {
+      clicksound.loop = false;
+    });
   </script>
 </html>

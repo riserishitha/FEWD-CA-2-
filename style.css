@@ -1,19 +1,20 @@
+/* universal tag  */
 * {
     padding: 0px;
     margin: 0px;
 }
-
+/* font-famiy to body tags */
 body {
     font-family: 'Jolly Lodger', cursive;
 }
-
+/* giving background img for the taken class */
 .game-body {
     text-align: center;
     background: url("./background.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/* adding styles for the id  */
 #instructions{
     border-radius: 10px;
     border: 2px solid whitesmoke;
@@ -21,7 +22,7 @@ body {
     justify-content: center;
     margin-top: 10%;
 }
-
+/* adding styles for the id tag  */
 #background {
     width: 650px;
     height: 550px;
@@ -32,7 +33,7 @@ body {
     border: 2px solid white;
     border-radius: 20px;
 }
-
+/* using css animations and making font to bounce  */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -44,14 +45,14 @@ body {
         transform: translateY(-15px);
     }
 }
-
+/* getting the animation for the wanted element */
 #login-page p {
     font-size: 1.5rem;
     font-family:  'Jolly Lodger', cursive;
     animation: bounce 2s infinite;
     margin-left: 20px;
 }
-
+/* using css animations and making different font colors */
 @keyframes colorChange {
     0% { color: red; }
     25% { color: blue; }
@@ -59,12 +60,12 @@ body {
     75% { color: orange; }
     100% { color: red; }
 }
-
+/* getting the animation for the wanted element */
 #login {
     animation: colorChange 5s infinite;
     font-family:  'Jolly Lodger', cursive;
 }
-
+/* making a box for the loginpage id and adding styles */
 #login-page{
     width: 500px;
     height: 400px;
@@ -74,7 +75,7 @@ body {
     border: 2px solid white;
     border-radius: 20px;
 }
-
+/* stying login btn */
 #login{
     width: 100px;
     height: 50px;
@@ -90,11 +91,11 @@ body {
     color: black;
     cursor: pointer;
 }
-
+/* stying h1 tag */
 h1{
     text-align: center;
 }
-
+/* stying inputs taken to write the details  */
 .required{
     width: 450px;
     border: 2px solid black;
@@ -102,7 +103,7 @@ h1{
     margin-left: 20px;
     border-radius: 10px;
 }
-
+/* adding img for the divs created in js */
 #background div {
     width: 150px;
     height: 140px;
@@ -113,9 +114,8 @@ h1{
     align-items: center;
     justify-content: space-evenly;
     cursor: pointer;
-
 }
-
+/* stying the img given above  */
 #background div img{
     width: 100px;
     height: 100px;
@@ -125,7 +125,7 @@ h1{
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-
+/* giving postions and stying to the classes */
 .main-background,
 .end-background {
     position: absolute;
@@ -133,7 +133,7 @@ h1{
     width: 100%;
     height: 635px;
 }
-
+/* stying play btn */
 .playbutton {
     background-color: rgba(36, 33, 33, 0.534);
     border: 2px solid white;
@@ -141,11 +141,11 @@ h1{
     padding: 5px;
     cursor: pointer;
 }
-
+/* stying main logo  */
 .logo-main {
     margin-left: 50%;
 }
-
+/* stying playagain btn  */
 .playagain-button {
     margin-top: 5%;
     padding: 10px;
@@ -157,7 +157,7 @@ h1{
     justify-content: space-evenly;
     cursor: pointer;
 }
-
+/* using css animations and giving firecracker for font  */
 @keyframes firecracker {
     0% {
       transform: translateY(0) rotate(0deg);
@@ -172,12 +172,13 @@ h1{
       opacity: 0;
     }
 }
-  
+ /* getting the animation for this element */ 
 #show-score {
     margin-left: 550px;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    border: 1px solid white;
     color: #fff;
     background-color: #333;
     padding: 20px;
@@ -188,9 +189,8 @@ h1{
     text-align: center;
     align-items: center;
     justify-content: space-evenly;
-    /* font-size: 3rem; */
 }
-  
+ /* styling about page   */
 #about-us{
     border: 2px solid black;
     border-radius: 10px;
@@ -198,11 +198,11 @@ h1{
     cursor: pointer;
     background-color: rgba(192, 181, 181, 0.534);
 }
-
+ /* styling about page   */
 .about-pg{
     margin-top: 8%;
 }
-
+ /* styling exit btn   */
 #exit{
     border: 2px solid black;
     width: 100px;

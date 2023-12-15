@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>instructions</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="game-body">
+    <!-- connecing to css file  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="game-body">
+    <!-- adding img and playagain button to the page -->
     <div>
-        <img src="./instructions pg.png" alt="" id="instructions">
+      <img src="./instructions pg.png" alt="" id="instructions" />
     </div>
-    <img src="./playbutton.png" alt="" class="playbutton">
-</body>
-<script>
-    let playbutton = document.querySelector('.playbutton');
-playbutton.addEventListener('click', function () {
-  window.location.href = './game.html';
-});
-</script>
+    <img src="./playbutton.png" alt="" class="playbutton" />
+  </body>
+  <!-- giving js functions in html -->
+  <script>
+    // on clicking redirecing the page to the wanted page
+    let playbutton = document.querySelector(".playbutton");
+    playbutton.addEventListener("click", function () {
+      window.location.href = "./game.html";
+    });
+  </script>
 </html>
