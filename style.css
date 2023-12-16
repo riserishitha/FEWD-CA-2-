@@ -5,7 +5,7 @@
 }
 /* font-famiy to body tags */
 body {
-    font-family: 'Jolly Lodger', cursive;
+    font-family: 'Jolly Lodger', sans-serif;
 }
 /* giving background img for the taken class */
 .game-body {
@@ -24,8 +24,8 @@ body {
 }
 /* adding styles for the id tag  */
 #background {
-    width: 500px;
-    height: 500px;
+    width: 420px;
+    height: 420px;
     background-image: url("./ground.webp");
     margin: 0 auto;
     display: flex;
@@ -105,8 +105,8 @@ h1{
 }
 /* adding img for the divs created in js */
 #background div {
-    width: 120px;
-    height: 140px;
+    width: 95px;
+    height: 100px;
     background-image: url("./pot.png");
     background-size: cover;
     padding: 18px;
@@ -119,11 +119,6 @@ h1{
 #background div img{
     width: 100px;
     height: 100px;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 /* giving postions and stying to the classes */
 .main-background,
@@ -131,7 +126,6 @@ h1{
     position: absolute;
     z-index: -1;
     width: 100%;
-    /* height: 635px; */
 }
 /* stying play btn */
 .playbutton {
@@ -147,7 +141,7 @@ h1{
 }
 /* stying playagain btn  */
 .playagain-button {
-    margin-top: 5%;
+    margin-top: 15%;
     padding: 10px;
     margin-left: 35%;
     background-color: rgba(36, 33, 33, 0.534);
@@ -174,8 +168,9 @@ h1{
 }
  /* getting the animation for this element */ 
 #show-score {
-    margin-left: 550px;
+    margin-left: 20%;
     font-size: 24px;
+    margin-top: 10%;
     font-weight: bold;
     text-align: center;
     border: 1px solid white;
@@ -201,6 +196,8 @@ h1{
  /* styling about page   */
 .about-pg{
     margin-top: 8%;
+    border: 2px solid white;
+    border-radius: 10px;
 }
  /* styling exit btn   */
 #exit{
@@ -214,41 +211,38 @@ h1{
 }
 
 /* Media Queries for Responsiveness */
-@media only screen and (min-width: 325px) and (max-width: 600px) {
+@media only screen and (min-width: 320px) and (max-width: 600px) {
     .main-background {
-        width: 50%;
-        height: 45%;
+        width: 100%;
+        height: 100%;
     }
     #login-page{
-        width: 40%;
-        height: 10%;
+        width: 90%;
         margin-left: 2%;
-        margin-top: 5%;
+        margin-top: 40%;
     }
     #login-page p{
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
     .required{
-        width: 70%;
-        height: 90%;
+        width: 80%;
     }
     #login{
         margin-left: 30%;
-        height: 50%;
+        height: 10%;
         width: 30%;
         margin-bottom: 5%;
     }
     h1{
-        font-size: 0.75rem;
+        font-size: 1.75rem;
     }
     .logo-main{
-        width: 20%;
-        height: 10%;
-        margin-left: 10%;
+        width: 50%;
+        margin-left: 15%;
     }
     #about-us{
-        width: 10%;
-        margin-left: 2%;
+        width: 20%;
+        margin-left: 10%;
     }
     #instructions{
         margin-top: 50%;
@@ -274,7 +268,16 @@ h1{
     #show-score{
         margin-left: 5%;
     }
-
+    .about-pg{
+        width: 90%;
+        margin-top: 40%;
+    }
+    #exit{
+        margin-top: 20%;
+    }
+    .game-body{
+        height: 100vh;
+    }
 }
 
 

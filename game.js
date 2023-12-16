@@ -34,7 +34,7 @@ function startgame() {
   setInterval(setfox, 1300); //giving certain intervals to show the pic
   setInterval(setmonkey, 1500); //giving certain intervals to show the pic
 }
-// writing function to get random pot in the set of pots
+// using do while loop to ensure that the last pot is not repeated again while they are equal it converts random in the form of a string
 function getrandompot(lastPot) {
   let random;
   do {
@@ -45,6 +45,7 @@ function getrandompot(lastPot) {
 // adding fox imgs in random pots
 
 function setfox() {
+  // prevent default 
   if (finished) {
     return;
   }
@@ -53,7 +54,6 @@ function setfox() {
   }
   let fox = document.createElement("img");
   fox.src = "./fox.png";
-
   let random = getrandompot(lastFoxPot);
   if (whackmonkey && whackmonkey.id === random) {
     return;
@@ -65,6 +65,7 @@ function setfox() {
 // adding monkey img in random pots
 
 function setmonkey() {
+  // prevent default 
   if (finished) {
     return;
   }
@@ -73,7 +74,6 @@ function setmonkey() {
   }
   let monkey = document.createElement("img");
   monkey.src = "./monkey.png";
-
   let random = getrandompot(lastMonkeyPot);
   if (whackfox && whackfox.id === random) {
     return;
@@ -84,10 +84,11 @@ function setmonkey() {
 }
 // increasing the score if the correct pot is selected
 function choosethepot() {
+  // prevent default 
   if (finished) {
     return;
   }
-
+  // this means the clicked pot 
   if (this == whackfox) {
     score += 10;
     if (score >= 100) {
@@ -101,6 +102,7 @@ function choosethepot() {
       document.getElementById("score").innerText = score.toString();
       setfox();
     }
+      // this means the clicked pot 
   } else if (this == whackmonkey) {
     document.getElementById("score").innerText =
       "GAME OVER: " + score.toString();
