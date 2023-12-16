@@ -23,11 +23,11 @@ function playBackgroundSound() {
 function startgame() {
   for (let k = 0; k < 9; k++) {
     var pots = document.createElement("div");
-    pots.id = k.toString();
+    pots.id = k;
     pots.addEventListener("click", choosethepot);
     document.getElementById("background").appendChild(pots);
   }
-  setInterval(setfox, 1300); //giving certain intervals to show the pic
+  setInterval(setfox, 1000); //giving certain intervals to show the pic
   setInterval(setmonkey, 1500); //giving certain intervals to show the pic
 }
 // using do while loop to ensure that the last pot is not repeated again while they are equal it converts random in the form of a string
@@ -36,7 +36,7 @@ function getrandompot(lastPot) {
   do {
     random = Math.floor(Math.random() * 9);
   } while (random === lastPot);
-  return random.toString();
+  return random;
 }
 // adding fox imgs in random pots
 
@@ -91,17 +91,17 @@ function choosethepot() {
       score = 100;
       finished = true;
       document.getElementById("score").innerText =
-        "YOU WON!! " + score.toString();
+        "YOU WON!! " + score;
       // Redirect to end.html when the user wins
       window.location.href = "./end(won).html";
     } else {
-      document.getElementById("score").innerText = score.toString();
+      document.getElementById("score").innerText = score;
       setfox();
     }
       // this means the clicked pot 
   } else if (this == whackmonkey) {
     document.getElementById("score").innerText =
-      "GAME OVER: " + score.toString();
+      "GAME OVER: " + score;
     finished = true;
     // Redirect to end.html when the game is over
     window.location.href = "./end(lost).html";
