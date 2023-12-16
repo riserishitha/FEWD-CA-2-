@@ -14,13 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // giving background music for the page by giving function
 function playBackgroundSound() {
   const backgroundsound = new Audio("./Dora.mp3");
-  backgroundsound
-    .play()
-    .then(() => {
-      backgroundsound.loop = true;
-      backgroundsound.volume = 0.2;
-    })
-    .catch((error) => console.error("Error playing sound:", error));
+  backgroundsound.play()
+  backgroundsound.loop = true;
+  backgroundsound.volume = 0.2; 
 }
 // function initialized to start the game and also used to create divs instead of creating in html
 
