@@ -36,7 +36,7 @@ function getrandompot(lastPot) {
   do {
     random = Math.floor(Math.random() * 9);
   } while (random === lastPot);
-  return random;
+  return random.toString();
 }
 // adding fox imgs in random pots
 
